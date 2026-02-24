@@ -1,0 +1,45 @@
+/* Navbar */
+nav{
+    display:flex;
+    justify-content:center;
+    gap:30px;
+    padding:15px;
+    background: #1e293b;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #38bdf8;
+}
+
+.active {
+    border-bottom: 2px solid #38bdf8;
+}
+
+/* Default light mode */
+body{
+    margin: 0;
+    /* font-family: Arial, sans-serif */
+    /* 'Courier New', Courier, monospace; */
+    font-family:cursive; 
+    background: white;
+    color: black;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+/* Dark mode */
+body.dark-mode {
+    background: #0f172a;
+    color:white;
+}
+
+
+#theme-toggle {
+    margin-left: 20px;
+    padding: 5px 10px;
+    cursor: pointer;
+}

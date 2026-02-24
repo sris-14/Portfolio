@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{{url_for('static', filename = 'style.css')}}">
+</head>
+<body>
+    <header> 
+        <h1>Srishti Portfolio</h1>
+    </header>
+
+    {# dark mode toggle, nav bar, github link #}
+    <nav>
+       <a href="/" class="{% if active=='home' %}active{% endif %}">Home</a>
+       <a href="/projects" class="{% if active=='projects' %}active{% endif %}">Projects</a>
+       <a href="/contact" class="{% if active=='contact' %}active{% endif %}">Contact</a>
+
+       <button id="theme-toggle">🌙</button>
+    </nav>
+
+    <main>
+        {%block content%}
+        {%endblock%}
+    </main>
+     
+
+    <footer>
+      <p>© 2026 | Srishti Shukla</p>
+    </footer>
+
+
+    <script>
+        const toggleBtn = document.getElementById("theme-toggle");
+        const body = document.body;
+    
+        toggleBtn.addEventListener("click", () => {
+            body.classList.toggle("dark-mode");
+    
+            if(body.classList.contains("dark-mode")){
+                toggleBtn.textContent = "☀️";
+            } else {
+                toggleBtn.textContent = "🌙";
+            }
+        });
+    </script>
+</body>
+</html>
