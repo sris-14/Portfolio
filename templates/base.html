@@ -30,7 +30,7 @@
       <p>© 2026 | Srishti Shukla</p>
     </footer>
 
-
+    
     <script>
         const toggleBtn = document.getElementById("theme-toggle");
         const body = document.body;
@@ -44,6 +44,40 @@
                 toggleBtn.textContent = "🌙";
             }
         });
+    </script>
+
+    <script>
+        const textArray = [
+            "AI / ML Developer",
+            "Python Developer",
+            "Data Analyst"
+        ];
+    
+        let typingElement = document.getElementById("typing");
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+    
+        function typeEffect() {
+            const currentText = textArray[textIndex];
+    
+            if (isDeleting) {
+                typingElement.textContent = currentText.substring(0, charIndex--);
+            } else {
+                typingElement.textContent = currentText.substring(0, charIndex++);
+            }
+    
+            if (!isDeleting && charIndex === currentText.length) {
+                setTimeout(() => isDeleting = true, 1000);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                textIndex = (textIndex + 1) % textArray.length;
+            }
+    
+            setTimeout(typeEffect, isDeleting ? 50 : 100);
+        }
+    
+        document.addEventListener("DOMContentLoaded", typeEffect);
     </script>
 </body>
 </html>
