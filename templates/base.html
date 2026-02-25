@@ -6,9 +6,11 @@
     <title>{% block title %}{% endblock %}</title>
     <link rel="stylesheet" href="{{url_for('static', filename = 'style.css')}}">
 </head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 <body>
+    <div id="bg-canvas"></div>
     <header> 
-        <h1>Srishti Portfolio</h1>
+        <h1>Portfolio</h1>
     </header>
 
     {# dark mode toggle, nav bar, github link #}
@@ -30,7 +32,7 @@
       <p>© 2026 | Srishti Shukla</p>
     </footer>
 
-    
+    {# Dark mode toggle #}
     <script>
         const toggleBtn = document.getElementById("theme-toggle");
         const body = document.body;
@@ -46,6 +48,7 @@
         });
     </script>
 
+    {# Typing effect#}
     <script>
         const textArray = [
             "AI / ML Developer",
@@ -78,6 +81,44 @@
         }
     
         document.addEventListener("DOMContentLoaded", typeEffect);
+    </script>
+
+    {# Three.js background animation#}
+    <script>
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth/window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ alpha: true });
+        
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.getElementById("bg-canvas").appendChild(renderer.domElement);
+    
+        const geometry = new THREE.IcosahedronGeometry(2, 1);
+        const material = new THREE.MeshBasicMaterial({ 
+            color: 0x38bdf8, 
+            wireframe: true 
+        });
+    
+        const crystal = new THREE.Mesh(geometry, material);
+        scene.add(crystal);
+    
+        camera.position.z = 5;
+    
+        function animate() {
+            requestAnimationFrame(animate);
+    
+            crystal.rotation.x += 0.005;
+            crystal.rotation.y += 0.005;
+    
+            renderer.render(scene, camera);
+        }
+    
+        animate();
+    
+        window.addEventListener("resize", () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
     </script>
 </body>
 </html>

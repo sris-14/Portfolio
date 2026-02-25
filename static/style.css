@@ -75,3 +75,37 @@ body.dark-mode {
     background: black;
     color: white;
 }
+#bg-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+canvas {
+    display: block;
+}
+
+.contact{
+    /* background: #1e293b; */
+    background: #87c8e4;
+    color: white;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.contact-form{
+    justify-content: center;
+    display: flex;
+    gap: 30px;
+    padding: 50px 30px;
+}
+
+a{
+    text-decoration: none;
+    color: #0077B5;
+    font-weight: 100;
+    font: bolder;
+}
