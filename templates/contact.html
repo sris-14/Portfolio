@@ -11,13 +11,16 @@ Contact - Srishti Portfolio
     <p>Feel free to reach out!</p>
     <ul>
         {#<li>Email: <a href = 'srishtishukla781@gmail.com'>&#9993;</a></li>#}
-        <li>LinkedIn: <a href = 'https://www.linkedin.com/in/srishtii/'>Srishti</a></li>
+        <li>Visit My<a href = 'https://www.linkedin.com/in/srishtii/'>LinkedIn</a></li>
     </ul>
-    <section class="contact-form">
-        <h3>Send Me a Message</h3>
-        <form action="srishtishukla781@gmail.com" method = 'post'>
-            <textarea placeholder="Your message here..." rows="5" cols="40"></textarea>
-            <button class="btn">Send</button>
-        </form>    
-    </section>     
+    
+    <form action="/send-message" method = 'POST'>
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="email" name="email" placeholder="Your Email" required>
+
+        <textarea placeholder="Write your message..." required></textarea>
+        
+        <button type="submit">Send Message</button>
+    </form>    
+         
 {%endblock%}        
