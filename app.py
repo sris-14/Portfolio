@@ -1,9 +1,13 @@
 from flask import Flask, render_template, url_for
 import requests
 from flask_mail import Mail, Message
+from dotenv import load_dotenv
+import os
+
+
 
 app = Flask(__name__)
-app.secret_key = 'your-secret-key-here'
+# app.secret_key = 'your-secret-key-here'
 
 @app.route('/')
 def home():
