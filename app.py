@@ -3,7 +3,8 @@ import requests
 from flask_mail import Mail, Message
 from dotenv import load_dotenv
 import os
-
+# dotenv
+# UI
 
 
 app = Flask(__name__)
