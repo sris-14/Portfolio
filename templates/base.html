@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="{{url_for('static', filename = 'style.css')}}">
 </head>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
 <body>
     <div id="bg-canvas"></div>
     <header> 
@@ -36,9 +37,22 @@
     <script>
         const toggleBtn = document.getElementById("theme-toggle");
         const body = document.body;
-    
-        toggleBtn.addEventListener("click", () => {
+        const themeDarkModeOn = localStorage.getItem("dark_mode");
+        if(themeDarkModeOn == 'true') {
             body.classList.toggle("dark-mode");
+        }    
+        toggleBtn.addEventListener("click", () => {
+            const themeDarkModeOn = localStorage.getItem("dark_mode");
+            if(themeDarkModeOn == "false") {
+                localStorage.setItem("dark_mode", true);
+                body.classList.toggle("dark-mode");
+            } else {
+                localStorage.setItem("dark_mode", false);
+                body.classList.toggle("dark-mode");
+                
+            }
+
+            // body.classList.toggle("dark-mode");
     
             if(body.classList.contains("dark-mode")){
                 toggleBtn.textContent = "☀️";
