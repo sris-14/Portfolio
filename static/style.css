@@ -31,18 +31,20 @@ body{
     background: white;
     color: black;
     transition: background 0.3s ease, color 0.3s ease;
+    cursor: none;
 }
 /* Dark mode */
 body.dark-mode {
     background: #0f172a;
     color:white;
+    cursor: none;
 }
 
 
 #theme-toggle {
     margin-left: 20px;
     padding: 5px 10px;
-    cursor: pointer;
+    cursor: none;
 }
 
 .hero{
@@ -70,6 +72,7 @@ body.dark-mode {
     border-radius: 8px;
     font-weight: bold;
     transition: 0.3s ease;
+    cursor: pointer;
 }
 
 .btn:hover {
@@ -91,7 +94,7 @@ canvas {
 
 .contact{
     /* background: #1e293b; */
-    color: black;
+    color: rgb(233, 171, 108);
     padding: 50px 20px;
     text-align: center;
 }
@@ -109,3 +112,37 @@ a{
     font-weight: 100;
     font: bolder;
 }
+
+/* cursor styling */
+
+.cursor{
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background: #38bdf8;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 99999;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease, background 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 10px #38bdf8, 0 0 20px rgba(56, 189, 248, 0.6);
+}
+
+/* Cursor shine effect on hover */
+.cursor.hovering{
+    box-shadow: 0 0 20px #38bdf8, 0 0 35px rgba(56, 189, 248, 0.8), 0 0 45px rgba(56, 189, 248, 0.5);
+    width: 14px;
+    height: 14px;
+}
+
+.cursor-ring{
+    position: fixed;
+    width: 38px;
+    height: 38px;
+    border: 1.5px solid #38bdf8 ;
+    border-radius: 50%;
+    pointer-events: none;
+    opacity: 0.56;
+    transform: translate(-50%,-50%);
+    transition: width 0.3s ease height 0.3s ease;
+} 
