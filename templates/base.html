@@ -14,13 +14,14 @@
 
 
     <div id="bg-canvas"></div>
-    <header> 
+    <!-- <header> 
         <h1>Portfolio</h1>
-    </header>
+    </header> -->
 
     {# dark mode toggle, nav bar, github link #}
     <nav>
        <a href="/" class="{% if active=='home' %}active{% endif %}">Home</a>
+       <a href="/about" class="{% if active=='about' %}active{% endif %}">About</a>
        <a href="/projects" class="{% if active=='projects' %}active{% endif %}">Projects</a>
        <a href="/contact" class="{% if active=='contact' %}active{% endif %}">Contact</a>
 

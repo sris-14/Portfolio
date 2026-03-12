@@ -4,7 +4,10 @@ nav{
     justify-content:center;
     gap:30px;
     padding:15px;
-    background: #1e293b;
+    background: rgba(30, 41, 59, 0.8);
+    backdrop-filter: blur(20px);   /* Frosted glass blur effect */
+    -webkit-backdrop-filter: blur(20px);
+
 }
 
 nav a {
@@ -25,7 +28,7 @@ nav a:hover {
 /* Default light mode */
 body{
     margin: 0;
-    /* font-family: Arial, sans-serif */
+    /* font-family: Arial, sans-serif; */
     /* 'Courier New', Courier, monospace; */
     font-family:cursive; 
     background: white;
@@ -63,8 +66,8 @@ body.dark-mode {
 }
 
 .btn {
-    display: inline-block;
-    margin-top: 20px;
+    /* display: inline-block; */
+    /* margin-top: 20px;
     padding: 12px 25px;
     background: #38bdf8;
     color: black;
@@ -72,12 +75,34 @@ body.dark-mode {
     border-radius: 8px;
     font-weight: bold;
     transition: 0.3s ease;
-    cursor: pointer;
+    cursor: pointer; */
+
+
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, #0ea5e9, #06b6d4);
+    color: #fff;
+    text-decoration: none;
+    padding: 13px 30px;
+    border-radius: 100px;
+    font-family: 'Syne', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    transition: all 0.3s;
+    border: none;
+    cursor: none;
 }
 
+
 .btn:hover {
-    background: black;
-    color: white;
+    /* background: black;
+    color: white; */
+    background: transparent;
+    color: #5ddec4;
+    border: #5ddec4 solid 2px;
+    transform: translateY(-3px); 
+    box-shadow: 0 12px 38px rgba(14,165,233,0.45);
 }
 #bg-canvas {
     position: fixed;

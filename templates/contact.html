@@ -6,21 +6,107 @@ Contact - Srishti Portfolio
 {%endblock%}
 
 {%block content %}
-<section class="contact">
-    <h2>Contact Me</h2>
-    <p>Feel free to reach out!</p>
-    <ul>
-        {#<li>Email: <a href = 'srishtishukla781@gmail.com'>&#9993;</a></li>#}
-        <li>Visit My<a href = 'https://www.linkedin.com/in/srishtii/'>LinkedIn</a></li>
-    </ul>
-    
-    <form action="/send-message" method = 'POST'>
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
+<section id="contact">
+       <div class="section-label reveal">// contact.init()</div>
 
-        <textarea placeholder="Write your message..." required></textarea>
+       <div class="contact-grid">
+
+       <!-- LEFT: The actual form -->
+       <div class="contact-form-wrap reveal">
+           <div class="form-title">Send a Message</div>
+           <p class="form-subtitle">If something here caught your interest —
+              or you just want to talk about AI, projects, or ideas —
+              feel free to reach out.
+              I'm always open to learning, collaborating, and building interesting things.</p>
+
+           <div id="contactForm">
+
+                <!-- Name + Email row (2 columns) -->
+                <div class="form-row">
+                    <div class="form-group">
+                      <label class="form-label" for="inputName">Your Name</label>
+                      <input class="form-input" type="text" id="inputName" placeholder="Alex Johnson" required>
+                    </div>
+                    <div class="form-group">
+                      <label class="form-label" for="inputEmail">Email Address</label>
+                      <input class="form-input" type="email" id="inputEmail" placeholder="alex@company.com" required>
+                    </div>
+                </div>
         
-        <button type="submit">Send Message</button>
-    </form>    
+                <!-- Subject -->
+                <div class="form-group">
+                    <label class="form-label" for="inputSubject">Subject</label>
+                    <input class="form-input" type="text" id="inputSubject" placeholder="Project proposal / Collaboration / Just saying hi...">
+                </div>
+        
+                <!-- Message -->
+                <div class="form-group">
+                    <label class="form-label" for="inputMessage">Message</label>
+                    <textarea class="form-input" id="inputMessage" rows="5" placeholder="Tell me about your project, idea, or just say hello. I read every message."></textarea>
+                </div>
+    
+                <!-- Submit button — onclick calls submitForm() defined in JavaScript -->
+                <button class="form-submit" onclick="submitForm()">
+                    <span id="btnText">Send Message</span>
+                    <!-- Spinner is hidden by default; shown during loading -->
+                    <div class="spinner" id="submitSpinner"></div>
+                    <span id="btnIcon">🚀</span>
+                </button>
+        
+                <!-- Toast notification shown after form submission -->
+                <div class="form-toast" id="formToast"></div>
+            </div>
+        </div>
+
+        <!-- RIGHT: Contact info column -->
+        <div class="contact-info reveal">
+           <div class="contact-info-title">
+              Let's build<br><span style="color:var(--blue)">something great.</span>
+           </div>
+           <p class="contact-info-desc">
+               I'm currently available for freelance projects, full-time roles, and ambitious ideas.
+               Whether you have a clear brief or just a spark — I'd love to talk.
+           </p>
+
+            <!-- Email detail -->
+            <div class="contact-detail">
+              <div class="contact-detail-icon">✉️</div>
+              <div>
+                <div class="contact-detail-label">Email</div>
+                <div class="contact-detail-value">
+                  <a href="mailto:hello@yourportfolio.dev">hello@yourportfolio.dev</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Location detail -->
+            <div class="contact-detail">
+              <div class="contact-detail-icon">📍</div>
+              <div>
+                <div class="contact-detail-label">Location</div>
+                <div class="contact-detail-value">India</div>
+              </div>
+            </div>
+
+            <!-- Availability status -->
+            <div class="contact-detail">
+              <div class="contact-detail-icon">⚡</div>
+              <div>
+                <div class="contact-detail-label">Status</div>
+                <div class="contact-detail-value" style="color:var(--green)">
+                  Available for new projects
+                </div>
+              </div>
+            </div>
+
+            <!-- Social links row -->
+            <div class="contact-socials">
+              <a href="https://github.com"   class="social-link" target="_blank">⌥ GitHub</a>
+              <a href="https://linkedin.com" class="social-link" target="_blank">in LinkedIn</a>
+              <a href="https://twitter.com"  class="social-link" target="_blank">✕ Twitter</a>
+            </div>
+       </div>
+       </div>
+    </section>   
          
 {%endblock%}        
