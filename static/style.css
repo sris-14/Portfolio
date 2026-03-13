@@ -18,11 +18,17 @@ nav a {
     text-decoration: none;
     color: white;
     font-weight: bold;
+    letter-spacing: 0.1em;
 }
 
 nav a:hover {
     color: #38bdf8;
     
+}
+
+.nav-links{
+    display: flex;
+    gap: 28px;
 }
 
 .active {
@@ -32,8 +38,7 @@ nav a:hover {
 /* Default light mode */
 body{
     margin: 0;
-    font-family: Arial, sans-serif;
-    /* 'Courier New', Courier, monospace; */
+    font-family:'Tricot','Roboto Mono', monospace;
     background: white;
     color: black;
     transition: background 0.3s ease, color 0.3s ease;
