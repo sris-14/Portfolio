@@ -15,6 +15,10 @@ def home():
     # header | side bar | description| styling | projects - category | live link | updates - currently | contact me
     return render_template('index.html', active='home')
 
+@app.route('/about')
+def about():
+    return render_template('about.html', active='about')
+
 @app.route('/projects')
 def projects():
     return render_template('projects.html', active='projects')
