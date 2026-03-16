@@ -50,7 +50,7 @@ html{
 /* Default light mode */
 body{
     margin: 0;
-    font-family:'Tricot','Roboto Mono', monospace;
+    font-family:'Syne', sans-serif;
     background: white;
     color: black;
     transition: background 0.3s ease, color 0.3s ease;
@@ -72,7 +72,6 @@ body.dark-mode {
 }
 
 .hero{
-    text-align: center;
     padding: 100px 20px;
 }
 
