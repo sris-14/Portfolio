@@ -10,8 +10,8 @@ nav{
     background: rgba(38, 52, 72, 0.8);
     backdrop-filter: blur(20px);   /* Frosted glass blur effect */
     -webkit-backdrop-filter: blur(20px);
-    border: 1px solid rgba(36, 29, 29, 0.2);
-    /* box-shadow: 0 4px 6px rgba(0,0,0,0.1); */
+    border-bottom: 1px solid rgb(6, 67, 93);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
 
 nav a {
@@ -19,6 +19,9 @@ nav a {
     color: white;
     font-weight: bold;
     letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: color 0.3s;
+    font-weight: 600;
 }
 
 nav a:hover {
@@ -31,10 +34,19 @@ nav a:hover {
     gap: 28px;
 }
 
+footer{
+    text-align: center;
+    backdrop-filter: blur(20px);   
+    ;
+}
+
 .active {
     border-bottom: 2px solid #38bdf8;
 }
 
+html{
+    scroll-behavior: smooth;
+}
 /* Default light mode */
 body{
     margin: 0;
@@ -43,6 +55,7 @@ body{
     color: black;
     transition: background 0.3s ease, color 0.3s ease;
     cursor: none;
+    font-weight:100;
 }
 /* Dark mode */
 body.dark-mode {
@@ -74,18 +87,6 @@ body.dark-mode {
 }
 
 .btn {
-    /* display: inline-block; */
-    /* margin-top: 20px;
-    padding: 12px 25px;
-    background: #38bdf8;
-    color: black;
-    text-decoration: none;
-    border-radius: 8px;
-    font-weight: bold;
-    transition: 0.3s ease;
-    cursor: pointer; */
-
-
     display: inline-flex;
     align-items: center;
     gap: 10px;
@@ -179,3 +180,13 @@ a{
     transform: translate(-50%,-50%);
     transition: width 0.3s ease height 0.3s ease;
 } 
+
+.about{
+    margin: 20px 0;
+    padding: 50px 20px;
+}
+ul.skills-list{
+    /* list-style-type: disc; */
+    margin-left: 20px;
+    color: #e8c1c8;
+}
