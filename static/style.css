@@ -50,7 +50,7 @@ html{
 /* Default light mode */
 body{
     margin: 0;
-    font-family:'Syne', sans-serif;
+    font-family:'fira code', monospace;
     background: white;
     color: black;
     transition: background 0.3s ease, color 0.3s ease;
@@ -103,10 +103,15 @@ body.dark-mode {
 .hero h3{
     font-size: 1.5rem;
     height: 30px;
-    color: #38bdf8;
+    color: #0befef;
 }
 .hero-desc{
     color:#d2dff3;
+}
+
+.hero-desc strong{
+    color: #0ea5e9;
+    font-family: 'fira code', monospace;
 }
 
 .btn {
