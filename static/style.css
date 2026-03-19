@@ -72,17 +72,41 @@ body.dark-mode {
 }
 
 .hero{
-    padding: 100px 20px;
+    padding: 100px 30px;
 }
 
 .hero h2{
     font-size: 2.5rem;
+    color: #d2dff3;
+    display: inline-block;
+    cursor: default;
+    text-shadow: none;
+    line-height: 1.2;
+}
+
+.hero h2 span {
+    display: inline-block;
+    transition: text-shadow 0.2s ease, transform 0.2s ease;
+    cursor: default;
+}
+
+.hero h2 span:hover {
+    color: #fff;
+    text-shadow: 0 0 5px #fff, 0 0 10px #d2dff3;
+    transform: translateY(-2px);
+}
+
+.hero h2 span.space {
+    width: 0.25em;
 }
 
 .hero h3{
     font-size: 1.5rem;
     height: 30px;
     color: #38bdf8;
+}
+.hero-desc{
+    color:#d2dff3;
 }
 
 .btn {
@@ -149,13 +173,14 @@ canvas {
 
 #contact{
     /* background: #1e293b; */
-    color: rgb(233, 171, 108);
-    padding: 50px 20px;
-    text-align: center;
+    color:#d2dff3;
+    padding: 80px 30px;
+    /* margin: 20px 0; */
+    /* text-align: center; */
 }
 
 .contact-form{
-    justify-content: center;
+    /* justify-content: center; */
     display: flex;
     gap: 30px;
     padding: 50px 30px;
@@ -204,8 +229,8 @@ a{
 
 .about{
     margin: 20px 0;
-    padding: 50px 20px;
-    color: #8ba3c7;
+    padding: 60px 30px;
+    color:#d2dff3;
 }
 ul.skills-list{
     margin-left: 20px;
@@ -213,8 +238,9 @@ ul.skills-list{
 }
 
 .projects{
-    padding: 50px 20px;
+    padding: 60px 30px;
     margin: 20px 0;
+    color: #d2dff3;
 }
 
 .section-label{
