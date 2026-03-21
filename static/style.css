@@ -110,8 +110,11 @@ body.dark-mode {
 }
 
 .hero-desc strong{
-    color: #0ea5e9;
-    font-family: 'fira code', monospace;
+    color: #0ccdef;
+    font-family: 'Fira Code', monospace;
+    font-weight: 800;
+    font-size: 1.05em;
+    letter-spacing: 0.03em;
 }
 
 .btn {
