@@ -136,8 +136,6 @@ body.dark-mode {
 
 
 .btn:hover {
-    /* background: black;
-    color: white; */
     background: transparent;
     color: #5ddec4;
     border: #5ddec4 solid 2px;
@@ -164,6 +162,7 @@ body.dark-mode {
     color: #5ddec4;
     transform: translateY(-3px); 
     box-shadow: 0 15px 40px rgba(39, 172, 206, 0.45);
+    cursor: none;
 }
 
 #bg-canvas {
@@ -207,7 +206,7 @@ a{
     position: fixed;
     width: 10px;
     height: 10px;
-    background: #38bdf8;
+    background: #4fe4e4;
     border-radius: 50%;
     pointer-events: none;
     z-index: 99999;
@@ -227,7 +226,7 @@ a{
     position: fixed;
     width: 38px;
     height: 38px;
-    border: 1.5px solid #38bdf8 ;
+    border: 1.5px solid #16ef9f ;
     border-radius: 50%;
     pointer-events: none;
     opacity: 0.56;
