@@ -12,10 +12,8 @@ Projects - Srishti Portfolio
     <p class="section-desc reveal">A selection of projects that push boundaries — each one a small universe of its own.</p>
 
     <!-- reveal-stagger = children appear one after another with CSS delays -->
-    <div class="projects-grid reveal-stagger">
-
-      <!-- Jinja2 loop over the PROJECTS list from app.py -->
-      
+    <div class="projects-grid reveal-stagger"> 
+      {% for project in projects %}
       <div class="project-card reveal"
            data-color="#0ea5e9"
            style="--card-accent: #0ea5e9;">
@@ -24,8 +22,6 @@ Projects - Srishti Portfolio
         <div class="card-top">
           <div class="card-icon">🧠</div>
 
-          <!-- Conditionally apply status class based on project.status value.
-               Jinja2 if/elif/else mirrors Python's if/elif/else -->
           <div class="card-status
             status-live
             ">
@@ -37,7 +33,7 @@ Projects - Srishti Portfolio
         <div class="card-title">Nebula AI</div>
         <div class="card-desc">A deep learning platform that predicts user behavior patterns using transformer-based neural networks trained on multi-modal data.</div>
 
-        <!-- Tech stack tags — another inner loop -->
+        <!-- Tech stack tags -->
         <div class="card-tech">
           
           <span class="tech-tag">Python</span>
@@ -64,9 +60,6 @@ Projects - Srishti Portfolio
         <!-- Card header row -->
         <div class="card-top">
           <div class="card-icon">📡</div>
-
-          <!-- Conditionally apply status class based on project.status value.
-               Jinja2 if/elif/else mirrors Python's if/elif/else -->
           <div class="card-status
             status-live
             ">
