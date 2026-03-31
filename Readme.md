@@ -1,7 +1,7 @@
-# Project Name
+# Portfolio
 
 ## Overview
-Short description of project.
+It is portfolio website to showcase skills and projects.
 
 ## Features
 - Feature 1
