@@ -3,14 +3,11 @@
 ## Overview
 It is portfolio website to showcase skills and projects.
 
-## Features
-- Feature 1
-- Feature 2
 
 ## Tech Stack
 - Python
 - Flask
-- HTML/CSS
+- HTML/CSS/JS
 
 ## Demo
 (Add video / screenshots)
