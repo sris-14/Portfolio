@@ -258,3 +258,11 @@ ul.skills-list{
     text-transform: uppercase;
     margin-bottom: 10px;
 }
+
+.slider-container{
+    position: relative;
+    width: 600px;
+    overflow: hidden;
+    border-radius: 25px;
+    text-align: center;
+}
