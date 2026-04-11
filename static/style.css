@@ -269,7 +269,15 @@ ul.skills-list{
 }
 
 .slide{
-    border:2px solid white;
-    width: 100%;
+    border:1px solid white;
+    width: 250px;
     height: 300px;
+    padding: 20px;
+    margin: 10px;
+}
+
+.proj-info{
+    position: relative;
+    text-align: center;
+    padding: 15px;
 }
