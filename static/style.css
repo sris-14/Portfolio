@@ -267,3 +267,9 @@ ul.skills-list{
     text-align: center;
     margin: 0 auto;
 }
+
+.slide{
+    border:2px solid white;
+    width: 100%;
+    height: 300px;
+}
